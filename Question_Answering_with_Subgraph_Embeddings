@@ -4,6 +4,36 @@ Authors: Antoine Bordes, Sumit Chopra, Jason Weston
 AB: Antoine Bordes, Sumit Chopra, and JasonWeston. Question answering with subgraph embeddings.
 In Proceedings of EMNLP, 2014.
 
+Few sentences:
+Antoine et al.,2014, presented a subgraph embedding question answering model based on knowledgebase for a variety of topics. 
+
 Summery:
+According to this system, it has access to a set of training question-answer pairs and a KB providing structures
+among answers. It is supposed that KB has all potential answers and sequences of words of a question as one identified KB entity. 
+If any entity is not given for a question, plain string matching is used to perform entity resolution. 
+
+This system uses WebQuestions, a developed subset from Freebase and ClueWeb extractions and a paraphrasing version of WikiAnswers.
+
+
+
+Knowledge from this paper:
+Open QA systesms can be of two main types. First one is information retrieval based QA system and the second one is semantic
+parsing based QA system. 
+In the first one, initially a question is transformed into a query and then a broad set of candidate answers are retrieved 
+by searching from kbs based on the generated query. Then the extact answer is selected using different heuristics. [Example 
+Xuchen Yao and Benjamin Van Durme. 2014. Information extraction over structured data: Question answering with freebase. 
+In Proceedings of the 52nd Annual Meeting of the ACL]
+
+In the second case, it tries to get the correct interpretation of a question using semantic similarity based systems and then 
+transforms a question into a database query which returns the correct answer. [Example Anthony Fader, Luke Zettlemoyer, 
+and Oren Etzioni. 2013. Paraphrase-driven learning for open question answering. In Proceedings of the 51st Annual Meeting
+of the Association for Computational Linguis- tics, pages 1608–1618, Sofia, Bulgaria.]
+
+
+
+Connected papers: 
+1. Antoine Bordes, Jason Weston, and Nicolas Usunier. 2014b. Open question answering with weakly supervised embedding models. 
+In Proceedings of ECML-PKDD’14. Springer.
+
 
 
