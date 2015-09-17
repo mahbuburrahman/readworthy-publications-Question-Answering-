@@ -12,8 +12,13 @@ According to this system, it has access to a set of training question-answer pai
 among answers. It is supposed that KB has all potential answers and sequences of words of a question as one identified KB entity. 
 If any entity is not given for a question, plain string matching is used to perform entity resolution. 
 
+This model learns low-dimensional vector embeddings of words appearing in questions and of entities and relation types
+of FREEBASE. As a result the representations of questions and of their corresponding answers are close to each other in the joint 
+embedding space. Learning embeddings is calculated using the following score fuction.
+  S(q, a) = f(q)^T.g(a) 
+  
+Ths function S generates a high score if a is the correct answer to the question q, and otherwsie a low score.
 This system uses WebQuestions, a developed subset from Freebase and ClueWeb extractions and a paraphrasing version of WikiAnswers.
-
 
 
 Knowledge from this paper:
@@ -28,7 +33,6 @@ In the second case, it tries to get the correct interpretation of a question usi
 transforms a question into a database query which returns the correct answer. [Example Anthony Fader, Luke Zettlemoyer, 
 and Oren Etzioni. 2013. Paraphrase-driven learning for open question answering. In Proceedings of the 51st Annual Meeting
 of the Association for Computational Linguis- tics, pages 1608–1618, Sofia, Bulgaria.]
-
 
 
 Connected papers: 
