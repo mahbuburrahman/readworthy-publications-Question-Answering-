@@ -6,12 +6,33 @@ SA: Hasan, S. A., Zhu, X., Dong, Y., Liu, J., & Farri, O., A hybrid approach to 
 answering. In Proceedings of the 2014 Text Retrieval Conference, 2014
 
 Few sentences:
+This paper presents approache to retrieve relevant biomedical articles that can answer questions related to multiple categories
+of clinical information needs.
 
 Summery:
+It has three main processes.
+1. Topical Keyword Extraction: extraction of ontologybased topical keywords.
+The Keywords which represents specific topic in the area. That means topic description. 
 
+2. Knowledge-based Clinical Inferencing: use of topical keywords as queries to a third-party clinical knowledge base and
+extraction of a ranked list of inferred diagnoses/tests/treatments corresponding to each given topic
+
+3. Biomedical Literature Retrieval: retrieval and ranking of pertinent biomedical articles based on the keywords,
+concepts, and the ranked list of inferred diagnoses/tests/ treatments extracted in the prior steps.
+
+Dataset: PubMed 
+KB: From Wikipedia
 
 Knowledge from this paper:
-
+1. We can generate topical keywords from an RFP using different topic modeling algorithm.
+2. Then we can develop a knowledgebase from RFP domain where each of the entry will represent an inference or concept. It may
+be some answer pattern from RFP. 
+For example
+When is due?
+The due is July 30, 2015.
+So it may be some relations (Subject. predicate, object)
+Then we can map our topical keywork in the relationships to retrive a list of relevant cocenpts or answer relationship
+3. Then we can search same pattern from the test RFP for getting relevant sentences which mach with retrieved cocenpts.
 
 
 Connected papers: 
