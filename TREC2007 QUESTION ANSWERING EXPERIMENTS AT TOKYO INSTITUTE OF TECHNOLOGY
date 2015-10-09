@@ -6,14 +6,25 @@ EW: Edward W. D. Whittaker, Matthias H. Heie, Josef R. Novak and Sadaoki Furui
 TREC2007 QUESTION ANSWERING EXPERIMENTS AT TOKYO INSTITUTE OF TECHNOLOGY. TRAC 2007
 
 Few sentences:
-
+This is a data-driven and non-linguistic question answering approach.  In this approach, they generate Language models 
+for each sentence and also for documents. Then they combine both types of language models for taking advantage of contextual
+information. 
 
 Summery:
+
+
 
 
 Knowledge from this paper:
 
 
+Sentence retrieval:
+Document retrieval:
+
 
 Connected papers: 
-1. 
+1. Whittaker, E., Novak, J., Chatain, P. and Furui, S., “TREC2006 Question Answering Experiments at Tokyo Institute of 
+Technology”, Proc. TREC-15, 2006.
+2. Whittaker, E., Furui, S. and Klakow, D., “A Statistical Pattern Recognition Approach to Question Answering using
+Web Data”, Proc. Cyberworlds, 2005, pp. 421-428.
+
