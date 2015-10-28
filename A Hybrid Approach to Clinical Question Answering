@@ -8,9 +8,12 @@ Computational Linguistics–Human Language Technologies. NAACL HLT. 2015.
 
 
 Few sentences:
-
+They developed a natural language interface which allows users to query in KBs with natural langauge questions. Given a complete
+question, this system parses the question in first order logic representation using a grammer derived form interlinked dataset.
+They also developed translators to convert FOL query into executable queries in KBs. 
 
 Summery:
+
 
 
 Dataset: 
