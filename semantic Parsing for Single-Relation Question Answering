@@ -1,5 +1,4 @@
 
-
 Title: semantic Parsing for Single-Relation Question Answering
 Authors: W. Yih, X. He, C. Meek
 
@@ -10,11 +9,40 @@ Few sentences:
 
 Summery:
 
+They develop a semantic parsing framework based on semantic similarity for open question answering. They focus on single 
+relation factual questions and decompose each question into an entity mention and a relation pattern. They use convolutional
+neural network models to measure the similarity of entity mentions with entities and relation pattern with relation in the
+knowledge base (KB).  
+
+A single relation question is defined as a question composed of an entity mention and a binary relation description where the 
+answer  to the question is the naother entity for the given relation in the question.
+
+Example of Single relation factual question: Who is the CEO of Tesla? 
+
+Enrity mention: Tesla
+Reation : is_the_CEO
+Answer: another entity from KB
+
+And a knowledgebase is viewed as a collection of binary relation instances in the form of r(e1,e2) where e1 and e2 are
+first and second arguments of relation r.
+
+
+They develop to semantic similarity models:
+One : Linking entity mention from question to entity in KB.
+Another one: Maps a relation pattern to a relation in KB.
+Answer is derived by finding the relation-entity triple r(e1,e2) in the KB and returning the missing entity from the question. 
+
+
+They didn't handle multi-relation questions.
 
 Dataset: 
+PARALAX dataset : paraphrases of questions mined from wikianswers and answer triples are from reverb.
+
 
 Knowledge from this paper:
 
 
 Connected papers: 
-1. 
+1. Anthony Fader, Luke Zettlemoyer, and Oren Etzioni. 2013. Paraphrase-driven learning for open question answering. In 
+Proceedings of the 51st Annual Meet- ing of the Association for Computational Linguis- tics (Volume 1: Long Papers), 
+pages 1608–1618, Sofia, Bulgaria, August. Association for Computa- tional Linguistics.
