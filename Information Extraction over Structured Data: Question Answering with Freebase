@@ -7,28 +7,31 @@ In Proceedings of ACL. 2014.
 
 Few sentences:
 
-
-
 Summery:
-They consider KB as a interlined collection of topics. When a question is given on one or more topics, they collect all involved
-topics as a related node within few hops of relation to the topic node to extract answer. They called this a topic graph and they 
-assume that answer can be found within this graph. This graph is formed form freebase graph. They do this by mapping relation 
-arguments triples to freebase relation triples.
+They consider KB as a interlinked collection of topics. When a question is given on one or more topics, they collect all 
+involved topics as a related node within few hops of relation to the topic node to extract answer. They called this a topic 
+graph and they  assume that answer can be found within this graph. This graph is formed from freebase graph. They do this
+by mapping relation arguments triples to freebase relation triples.
+
+To get the topic node , they use Freebase Search API wheere all named entities from a question are input and a ranked list of 
+relevant topics are output. Once a topic is obtained, they use Freebase Topic API to retrieve all relevant information
+which is basiclaly a topic graph.
 
 They mine ClueWeb for mapping relations. The ClueWeb dataset is a collection of 1 billion webpages. FACCI , the Freebase 
 Annotation of the ClueWeb Corpus version 1  contains index and offset of Freebase entities within the English portion 
 of ClueWeb.  
 
-
-
-They use Google Suggestion service to get questions commonly asked by users. 
-
+They use Google Suggestion service to get questions commonly asked by users. They have 3778 training and 2032 testing questions
+which are annotated with answerd from Freebase. 
 
 They generate a question graphs based on following information from a  question by using dependency parse.
 Question word (what), question focus(cue to expected answer, name), question verb(is, play), question topic(NER) 
 
 To get the most likely relation from a question they calculate, given a question Q of a word vector w, they want to find
 out the relation R that maximizes the probability P (R | Q). They use naive bayes rules for this .
+
+For each question, they extract all relations from topic graph and ranked each relation with whether it is the answer 
+relation. They use mean average precision and mean reciprocal rank. The count word overlap between relations and question.
 
 
 
